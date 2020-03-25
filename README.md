@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Nikita Matta - Data Science Portfolio
 
 You can use the [editor on GitHub](https://github.com/nmatta72/nmatta72.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
