@@ -15,9 +15,9 @@ Here are some visualizations I did in R using ggplot:
 
 [USA STD Cases Data - Visuals in R Markdown](https://github.com/nmatta72/nmatta72.github.io/blob/master/ggplot_r_markdown.Rmd)
 
-I came across D3JS in my data visualization class
+I came across D3JS in my data visualization class. D3JS is a JavaScript library to produce dynamic and interactive visualizations in web browsers - it was a good introduction to the challenging language of JavaScript. Check out the link below for a dynamic visualization of net migration in European countries:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+[2016 vs 2018 Net Migration Europe - D3JS](https://bl.ocks.org/nmatta72/a3ba863e7e35cdd2c2565c0cf572fe46)
 
 
 
