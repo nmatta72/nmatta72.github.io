@@ -1,10 +1,17 @@
 ## Nikita Matta - Data Science Portfolio
 
+Thanks for checking out my Github site! Here you'll find links to machine learning projects that I've completed in my master's program, along with other personal projects that I picked up along the way. 
+
+### Machine Learning
+
+I found my passion for machine learning on a specific project during my master's - the Pump It Up Competition on drivendata.org Check out the link below for my first machine learning pipeline in jupyter notebook, which documents my thought process for every step I took:
+[Pump It Up Jupyter Notebook](https://github.com/nmatta72/nmatta72.github.io/blob/master/PumpItUpCompetitionCode.ipynb)
+
 You can use the [editor on GitHub](https://github.com/nmatta72/nmatta72.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
