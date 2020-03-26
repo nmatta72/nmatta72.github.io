@@ -4,7 +4,8 @@ Thanks for checking out my Github site! Here you'll find links to machine learni
 
 ### Machine Learning
 
-I found my passion for machine learning on a specific project during my master's - the Pump It Up Competition on drivendata.org Check out the link below for my first machine learning pipeline in jupyter notebook, which documents my thought process for every step I took:
+I found my passion for machine learning on a specific project during my master's - the Pump It Up Competition on drivendata.org 
+Check out the link below for my first machine learning pipeline in jupyter notebook, which documents my thought process for every step I took:
 [Pump It Up Jupyter Notebook](https://github.com/nmatta72/nmatta72.github.io/blob/master/PumpItUpCompetitionCode.ipynb)
 
 You can use the [editor on GitHub](https://github.com/nmatta72/nmatta72.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
