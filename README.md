@@ -9,7 +9,13 @@ Check out the link below for my first machine learning pipeline in jupyter noteb
 
 [Pump It Up Jupyter Notebook](https://github.com/nmatta72/nmatta72.github.io/blob/master/PumpItUpCompetitionCode.ipynb)
 
-You can use the [editor on GitHub](https://github.com/nmatta72/nmatta72.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### Data Visualization
+
+Here are some visualizations I did in R using ggplot:
+
+[USA STD Cases Data - Visuals in R Markdown](https://github.com/nmatta72/nmatta72.github.io/blob/master/ggplot_r_markdown.Rmd)
+
+I came across D3JS in my data visualization class
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
