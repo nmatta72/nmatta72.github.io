@@ -1,0 +1,353 @@
+---
+title: "STD Occurences in the US from 1994 to 2014"
+subtitle: "Group Assignment"
+author: "MB2 Group 2"
+date: "16/02/2020"
+output:
+  html_document:
+      fig_caption: yes
+      code_folding: hide
+      toc: true
+      toc_float: true
+params:
+  path: 'C:/Users/nikit/Desktop/IE/TERM II/Data Vis/Group Assignment I/STD Cases.csv'
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r Libraries, include=FALSE}
+if(!'ggplot2'%in%installed.packages()){
+  install.packages('ggplot2')}
+if(!'ggthemes'%in%installed.packages()){
+  install.packages('ggthemes')}
+if(!'nlme'%in%installed.packages()){
+  install.packages('nlme')}
+if(!'gapminder'%in%installed.packages()){
+  install.packages('gapminder')}
+if(!'gganimate'%in%installed.packages()){
+  install.packages('gganimate')}
+if(!'ggExtra'%in%installed.packages()){
+  install.packages('ggExtra')}
+if(!'psych'%in%installed.packages()){
+  install.packages('psych')}
+if(!'reshape2'%in%installed.packages()){
+  install.packages('reshape2')}
+if(!'dplyr'%in%installed.packages()){
+  install.packages('dplyr')}
+if(!'nycflights13'%in%installed.packages()){
+  install.packages('nycflights13')}
+if(!'ggcorrplot'%in%installed.packages()){
+  install.packages('ggcorrplot')}
+if(!'waffle'%in%installed.packages()){
+  install.packages('waffle')}
+if(!'tidyr'%in%installed.packages()){
+  install.packages('tidyr')}
+if(!'scales'%in%installed.packages()){
+  install.packages('scales')}
+if(!'ggalt'%in%installed.packages()){
+  install.packages('ggalt')}
+if(!'data.table'%in%installed.packages()){
+  install.packages('data.table')}
+if(!'data.table'%in%installed.packages()){
+  install.packages('data.table')}
+if(!'data.table'%in%installed.packages()){
+  install.packages('data.table')}
+if(!'extrafont'%in%installed.packages()){
+  install.packages('extrafont')}
+if(!'lubridate'%in%installed.packages()){
+  install.packages('lubridate')}
+if(!'DT'%in%installed.packages()){
+  install.packages('DT')}
+if(!'grid'%in%installed.packages()){
+  install.packages('grid')}
+if(!'gridExtra'%in%installed.packages()){
+  install.packages('gridExtra')}
+if(!"prettydoc" %in% installed.packages()) {
+  install.packages("prettydoc")}
+if(!"devtools" %in% installed.packages()) {
+  install.packages("devtools")}
+if(!"tidyverse" %in% installed.packages()) {
+  install.packages("tidyverse")}
+if(!"ggdark" %in% installed.packages()) {
+  install.packages("ggdark")}
+if(!"here" %in% installed.packages()) {
+  install.packages("here")}
+if(!"png" %in% installed.packages()) {
+  install.packages("png")}
+if(!"gifski" %in% installed.packages()) {
+  install.packages("gifski")}
+if(!"data.table" %in% installed.packages()) {
+  install.packages("data.table")}
+if(!"forcats" %in% installed.packages()) {
+  install.packages("forcats")}
+if(!"tufte" %in% installed.packages()) {
+  install.packages("tufte")}
+if(!"colorspace" %in% installed.packages()) {
+  install.packages("colorspace")}
+if(!"viridisLite" %in% installed.packages()) {
+  install.packages("viridisLite")}
+if(!"formatR" %in% installed.packages()) {
+  install.packages("formatR")}
+if(!"DiagrammeR" %in% installed.packages()) {
+  install.packages("DiagrammeR")}
+if(!"xaringan" %in% installed.packages()) {
+  install.packages("xaringan")}
+if(!"GGally" %in% installed.packages()) {
+  install.packages("GGally")}
+if(!"plotly" %in% installed.packages()) {
+  install.packages("plotly")
+}
+
+#Connect with the libaries
+library(ggplot2)
+library(ggthemes)
+library(nlme)
+library(gganimate)
+library(gapminder)
+library(ggExtra)
+library(psych)
+library(reshape2)
+library(dplyr)
+library(nycflights13)
+library(ggcorrplot)
+library(waffle)
+library(tidyr)
+library(scales)
+library(ggalt)
+library(data.table)
+library(extrafont)
+library(lubridate)
+library(DT)
+library(grid)
+library(gridExtra)
+library(prettydoc)
+library(devtools)
+library(tidyverse)
+library(ggdark)
+library(here)
+library(png)
+library(gifski)
+library(forcats)
+library(tufte)
+library(colorspace)
+library(viridisLite)
+library(Zelig)
+library(formatR)
+library(DiagrammeR)
+library(xaringan)
+library(GGally)
+library(plotly)
+require(maps)
+require(viridis)
+```
+```{r Themes, include=FALSE}
+fill_color = '#111111'
+decoration_color = '#cccccc'
+main1_color = '#f20675'
+main2_color = '#1ce3cd'
+
+theme_set(theme_bw())
+
+group_2_theme<-theme_bw() + theme(
+  panel.grid.major = element_blank(), 
+  panel.grid.minor = element_blank(),
+  plot.title = element_text(size = 14, hjust = 0.2, color = decoration_color),
+  axis.title = element_text(size = 10, hjust = 0.5, color = decoration_color),
+  axis.text = element_text(colour = decoration_color, size = 8),
+  axis.ticks = element_blank(),
+  axis.line = element_line(colour = decoration_color, size=0.3, linetype = "dashed"), 
+  panel.border = element_blank(),
+  panel.grid = element_blank(),
+  strip.text = element_text(size = 12, color = decoration_color),
+  panel.background = element_blank(),
+  strip.background =element_blank(),
+  plot.background = element_blank(),
+  legend.text	= element_text(size = 10, hjust = 0.5, color = decoration_color), 
+  legend.position = c(0.815, 0.27),
+  legend.key = element_blank(),
+  legend.title = element_blank() 
+)
+
+theme_set(group_2_theme)
+
+theme_set(dark_theme_gray()+ theme(
+  panel.grid.major = element_blank(), 
+  panel.grid.minor = element_blank(),
+  plot.title = element_text(size = 14, hjust = 0, color = decoration_color),
+  axis.ticks = element_blank(),
+  axis.title = element_text(size = 10, hjust = 0.5, color = decoration_color),
+  legend.title = element_blank(),
+  panel.background =element_rect(fill = fill_color),
+  strip.background =element_rect(fill = fill_color), 
+  plot.background = element_rect(fill = fill_color),
+  legend.background = element_rect(fill = fill_color)
+))
+
+#No axis title
+theme_set(dark_theme_gray()+ theme(
+  panel.grid.major = element_blank(), 
+  panel.grid.minor = element_blank(),
+  axis.title = element_blank(),
+  axis.text = element_text(colour = decoration_color, size = 9),
+  axis.ticks = element_blank(),
+  legend.title = element_blank(),
+  panel.background =element_rect(fill = fill_color),
+  strip.background =element_rect(fill = fill_color), 
+  plot.background = element_rect(fill = fill_color),
+  legend.background = element_rect(fill = fill_color)
+))
+
+```
+
+ ```{css, echo=FALSE}
+    h1,h2,h3,h4,h5,h6 {
+      color: white;
+    }
+    body {
+      max-width: 1280px !important;
+      background-color: black;
+      color: white;
+    }
+    #TOC>ul>li, .codeChunk {
+      background-color: black;
+      border-color: black;
+      color: white;
+    }
+```
+
+## Dataset Overview
+
+Insert introduction to our data set (Sul) 
+
+```{r load data, include=FALSE}
+df_std<-read.csv(params$path)
+str(df_std)
+```
+```{r Data Preparation, include=FALSE}
+df_std_complete<-df_std[complete.cases(df_std),]
+head(df_std_complete)
+df_std_year_state<-aggregate(df_std_complete[,c('Rate.per.100K')], FUN = sum, by=list(States=df_std_complete$State, Year=df_std_complete$Year))
+names(df_std_year_state)[names(df_std_year_state) == "x"] <- "STD_per_100K"
+head(df_std_year_state)
+US_avg <- df_std_year_state %>% group_by(Year) %>% summarize(mean(STD_per_100K))
+names(US_avg)[names(US_avg) == "mean(STD_per_100K)"] <- "STD_per_100K"
+```
+
+
+
+## STD Rates   
+
+Insert Text & storyline (Sul)
+
+```{r Graph 1, class.source="codeChunk"}
+
+ggplotly(ggplot() +
+  geom_line(data = df_std_year_state, aes(x = Year, y = STD_per_100K, group=States),
+            color = main2_color, size = 0.2, alpha = 0.2) +
+  geom_line(data = US_avg, aes(x = Year, y = STD_per_100K), 
+            color = main2_color) +
+  xlab("Year") +
+  ylab("STD_per_100K")) 
+```
+
+
+## Average STD Rates
+
+Insert Text & storyline (Sul)
+
+```{r Graph 2, class.source="codeChunk"}
+
+
+world_map <- map_data("world")
+Alaska.map <- subset(world_map,world_map$subregion=='Alaska')
+Hawaii.map <- subset(world_map,world_map$subregion=='Hawaii')
+Canada <- subset(world_map,world_map$region=='Canada')
+Outliers <- rbind(Alaska.map,Hawaii.map)
+names(Outliers)[names(Outliers) == "subregion"] <- "State"
+names(Canada)[names(Canada) == "region"] <- "State"
+Outliers$region <- NULL
+Canada$subregion <- NULL
+Outliers_2 <- rbind(Outliers,Canada)
+Outliers_2$State <- tolower(Outliers_2$State)
+
+states_map <- as.data.frame(map_data("state"))
+names(states_map)[names(states_map) == "region"] <- "State"
+states_map$subregion <- NULL
+
+all.us <- rbind(states_map,Outliers_2)
+
+
+df_std$State <- tolower(df_std$State)
+names(df_std)[names(df_std) == "ï..Disease"] <- "Disease"
+
+df1_avg <- as.data.frame(df_std %>% group_by(State) %>% summarize(mean(STD.Cases,na.rm = T)))
+names(df1_avg)[names(df1_avg) == "mean(STD.Cases, na.rm = T)"] <- "STD.Cases"
+
+df1_avg_rate <- as.data.frame(df_std %>% group_by(State) %>% summarize(mean(Rate.per.100K,na.rm = T)))
+names(df1_avg_rate)[names(df1_avg_rate) == "mean(Rate.per.100K, na.rm = T)"] <- "Rate.per.100K"
+
+STD_Cases_map_rate <- left_join(all.us,df1_avg_rate, by = 'State')
+
+map <- ggplot(STD_Cases_map_rate, aes(long, lat, group = group,text = paste("State:", State)))+
+  geom_polygon(aes(fill = Rate.per.100K), color = "white", size = 0.1)+
+  xlim(-180,-50)+
+  ylim(20,72)+
+  scale_fill_continuous(low = '#1ce3cd', high = '#000000', limits=c(100,770), na.value="#555555")+
+  theme(axis.text.x=element_blank(),axis.text.y=element_blank())
+
+ggplotly(map, tooltip = c('text', "Rate.per.100K"))
+
+```
+
+
+## STD rates on the Rise 
+
+Insert Text & storyline (Sul)
+
+```{r Graph 3, class.source="codeChunk", fig.height=11}
+df_std_trend<-df_std_year_state[df_std_year_state$Year%in%c(1996,2014),]
+df_std_trend_unmelt <- reshape2::dcast(df_std_trend, States ~ Year, value.var = "STD_per_100K")
+names(df_std_trend_unmelt)[names(df_std_trend_unmelt) == "1996"] <- "a"
+names(df_std_trend_unmelt)[names(df_std_trend_unmelt) == "2014"] <- "b"
+df_std_trend_unmelt_2 <- df_std_trend_unmelt[order(df_std_trend_unmelt$a) , ]
+
+
+ggplot(df_std_trend_unmelt_2, aes(y=reorder(States,-a), x=a, xend=b, size=b)) + 
+  geom_dumbbell(color=main2_color, size =0.1, colour_x= main2_color, size_x=1.0, colour_xend= decoration_color, size_xend=2)
+
+```
+
+
+## STD rates by Age
+
+Insert Text & storyline (Sul)
+
+```{r Graph 4, class.source="codeChunk"}
+
+df_std_age<-df_std_complete[df_std_complete$Year%in%c('2014'),]
+df_std_age_agg<-aggregate(df_std_age[,c('Rate.per.100K')], FUN = sum, by=list(State=df_std_age$State, Age=df_std_age$Age))
+names(df_std_age_agg)[names(df_std_age_agg) == "x"] <- "STD_per_100K"
+
+
+df_std_age_agg$State <- as.factor(df_std_age_agg$State)
+df_std_age_agg$Age <- as.factor(df_std_age_agg$Age)
+
+
+df_std_trend_unmelt_2$States <- as.character(df_std_trend_unmelt_2$States)
+df_std_trend_unmelt_3 <- df_std_trend_unmelt_2[order(-df_std_trend_unmelt_2$b) , ]
+
+df_std_trend_unmelt_4 <- df_std_trend_unmelt_3[1:10,]
+
+
+top_10_states<-df_std_trend_unmelt_4$States
+
+top_10_by_age<-subset(df_std_age_agg,df_std_age_agg$State %in% top_10_states)
+
+ggplot(top_10_by_age, aes(x=Age, y=STD_per_100K, group=State)) +
+  geom_line(alpha=0.5, color=main2_color) 
+
+```
+
+
