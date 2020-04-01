@@ -8,11 +8,14 @@ I found my passion for machine learning on a specific project during my master's
 Check out the link below for my first machine learning pipeline in jupyter notebook, which documents my thought process throughout the code:
 
 [Pump It Up Jupyter Notebook](https://github.com/nmatta72/nmatta72.github.io/blob/master/PumpItUpCompetitionCode.ipynb)
+
 Competition rank: 1725 out of 8996 contestants
 
 I also did a timed Kaggle competition during my master's - the bike sharing demand forecasting competiton found at: https://www.kaggle.com/c/bike-sharing-dsc/leaderboard. This was my first timed competition in which I had 3 hours to clean the data and test models. Check out the link below for a link to my code:
 
 [Kaggle Bike Sharing Jupyter Notebook](https://github.com/nmatta72/nmatta72.github.io/blob/master/Kaggle_Bike_Sharing_Challenge.ipynb)
+
+Competition rank: 5 out of 26 contestants
 
 
 ### Data Visualization
