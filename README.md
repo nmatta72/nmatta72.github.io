@@ -5,7 +5,7 @@ Thanks for checking out my Github site! Here you'll find links to machine learni
 ### Machine Learning
 
 I found my passion for machine learning on a specific project during my master's - the Pump It Up Competition on drivendata.org 
-Check out the link below for my first machine learning pipeline in jupyter notebook, which documents my thought process throughout the code:
+Check out the link below for my machine learning pipeline in jupyter notebook, which documents my thought process throughout the code:
 
 [Pump It Up Jupyter Notebook](https://github.com/nmatta72/nmatta72.github.io/blob/master/PumpItUpCompetitionCode.ipynb)
 _Competition rank: 1725 out of 8996 contestants_
@@ -15,6 +15,11 @@ I also did a timed Kaggle competition during my master's - the bike sharing dema
 [Kaggle Bike Sharing Jupyter Notebook](https://github.com/nmatta72/nmatta72.github.io/blob/master/Kaggle_Bike_Sharing_Challenge.ipynb)
 _Competition rank: 5 out of 26 contestants (late submission)_
 
+I took on a NLP challenge in the Real or Not Kaggle competition - found at: https://www.kaggle.com/c/nlp-getting-started/leaderboard. Throughout this challenge, I explored different ways clean textual data from tweets and experimented with models that are most efficient for text classification. Check out the link below for my code:
+
+[Kaggle Real or Not NLP Challenge Jupyter Notebook
+(https://github.com/nmatta72/nmatta72.github.io/blob/master/Real%20or%20Not%20NLP%20Kaggle%20Code.ipynb)
+_Competition rank: 932 out of 2549 contestants_
 
 ### Data Visualization
 
