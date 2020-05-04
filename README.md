@@ -22,9 +22,19 @@ _Competition rank: 932 out of 2549 contestants_
 
 ### Data Visualization
 
+#### R - ggplot
+
 Here are some visualizations I did in R using ggplot:
 
 [USA STD Cases Data - Visuals in R Markdown](https://github.com/nmatta72/nmatta72.github.io/blob/master/ggplot_r_markdown.Rmd)
+
+#### Tableau
+
+I've created dashboards on Tableau using datasets from other projects during my master's Check out the link below which contains two dashboards - the Exploratory Analysis Dashboard and the County Analysis Dashboard, which contains interesting oil production information within a county.
+
+
+
+#### D3.js
 
 I came across D3JS in my data visualization class. D3JS is a JavaScript library to produce dynamic and interactive visualizations in web browsers - it was a good introduction to the challenging language of JavaScript. Check out the link below for a dynamic visualization of net migration in European countries:
 
