@@ -25,7 +25,7 @@ _Competition rank: 932 out of 2549 contestants_
 #### R - ggplot
 
 Here are some visualizations I did in R using ggplot:
-[USA STD Cases Data - Visuals in R Markdown](https://github.com/nmatta72/nmatta72.github.io/blob/master/ggplot_r_markdown.Rmd)
+[USA STD Cases Data - Visuals in R Markdown](https://github.com/nmatta72/nmatta72.github.io/tree/master/R%20Visualization)
 
 #### Tableau
 
