@@ -12,12 +12,12 @@ _Competition rank: 1725 out of 8996 contestants_
 
 I also did a timed Kaggle competition during my master's - the bike sharing demand forecasting competiton found at: https://www.kaggle.com/c/bike-sharing-dsc/leaderboard. This was my first timed competition in which I had 3 hours to clean the data and test models. Check out the link below for a link to my code:
 
-[Kaggle Bike Sharing Jupyter Notebook](https://github.com/nmatta72/nmatta72.github.io/blob/master/Kaggle_Bike_Sharing_Challenge.ipynb)
+[Kaggle Bike Sharing Jupyter Notebook](https://github.com/nmatta72/nmatta72.github.io/blob/master/KaggleBikeSharingChallenge.ipynb)
 _Competition rank: 5 out of 26 contestants (late submission)_
 
 I took on a NLP challenge in the Real or Not Kaggle competition - found at: https://www.kaggle.com/c/nlp-getting-started/leaderboard. Throughout this challenge, I explored different ways clean textual data from tweets and experimented with models that are most efficient for text classification. Check out the link below for my code:
 
-[Kaggle Real or Not NLP Jupyter Notebook](https://github.com/nmatta72/nmatta72.github.io/blob/master/Real%20or%20Not%20NLP%20Kaggle%20Code.ipynb)
+[Kaggle Real or Not NLP Jupyter Notebook](https://github.com/nmatta72/nmatta72.github.io/blob/master/KaggleRealOrNotChallenge.ipynb)
 _Competition rank: 932 out of 2549 contestants_
 
 ### Data Visualization
