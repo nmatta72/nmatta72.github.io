@@ -20,6 +20,12 @@ I took on a NLP challenge in the Real or Not Kaggle competition - found at: http
 [Kaggle Real or Not NLP Jupyter Notebook](https://github.com/nmatta72/nmatta72.github.io/blob/master/KaggleRealOrNotChallenge.ipynb)
 _Competition rank: 932 out of 2549 contestants_
 
+### Packaging a Library
+
+I had the opportunity to combine my machine learning skills with some packaging features of Python, namely joblib, to execute a classification model. The purpose of this project is to make the model usable for the end user, have a look at the code below to see how this was executed:
+
+[Packaged ML Model](https://github.com/nmatta72/packaged-ml-model)
+
 ### Data Visualization
 
 #### R - ggplot
